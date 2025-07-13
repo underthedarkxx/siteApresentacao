@@ -9,6 +9,7 @@ document.addEventListener('mousemove', (e) => {
   light.style.opacity = '1';
 });
 
+// Inicializa partículas
 particlesJS('particles-js', {
   particles: {
     number: {
@@ -19,7 +20,7 @@ particlesJS('particles-js', {
       }
     },
     color: {
-      value: '#0dcaf0' // cor das partículas
+      value: '#0dcaf0'
     },
     shape: {
       type: 'circle'
@@ -47,7 +48,7 @@ particlesJS('particles-js', {
       straight: false,
       out_mode: 'out',
       attract: {
-        enable: true, // <- isso ativa o efeito de seguir o mouse
+        enable: true,
         rotateX: 600,
         rotateY: 1200
       }
@@ -58,11 +59,11 @@ particlesJS('particles-js', {
     events: {
       onhover: {
         enable: true,
-        mode: 'grab' // ou 'repulse' para afastar
+        mode: 'grab'
       },
       onclick: {
         enable: true,
-        mode: 'push' // ou 'remove'
+        mode: 'push'
       },
       resize: true
     },
@@ -81,6 +82,7 @@ particlesJS('particles-js', {
   retina_detect: true
 });
 
+// Cursor personalizado
 const cursor = document.querySelector('.custom-cursor');
 
 window.addEventListener('mousemove', e => {
@@ -106,22 +108,37 @@ window.addEventListener('mousemove', e => {
   }
 });
 
+// Sidebar e overlay
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('sidebar');
   const openBtn = document.getElementById('openSidebarBtn');
   const closeBtn = document.getElementById('closeSidebarBtn');
+  const overlay = document.getElementById('overlay');
 
   openBtn.addEventListener('click', () => {
     sidebar.classList.add('active');
+    overlay.classList.add('active');
   });
 
   closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
   });
 
   window.addEventListener('click', (e) => {
-    if (sidebar.classList.contains('active') && !sidebar.contains(e.target) && e.target !== openBtn) {
+    if (
+      sidebar.classList.contains('active') &&
+      !sidebar.contains(e.target) &&
+      e.target !== openBtn &&
+      e.target !== overlay
+    ) {
       sidebar.classList.remove('active');
+      overlay.classList.remove('active');
     }
   });
 });

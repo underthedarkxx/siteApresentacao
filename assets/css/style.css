@@ -446,3 +446,31 @@ body {
 #openSidebarBtn:hover {
     color: #00ffff;
 }
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5); /* preto semi-transparente */
+    opacity: 0;
+    pointer-events: none; /* não bloqueia clicks quando invisível */
+    transition: opacity 0.3s ease;
+    z-index: 12000; /* abaixo da sidebar (13000) */
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: auto; /* bloqueia clicks quando visível */
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        display: none !important;
+    }
+    #overlay {
+        display: none !important;
+    }
+}
+
