@@ -115,19 +115,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('closeSidebarBtn');
   const overlay = document.getElementById('overlay');
 
-  openBtn.addEventListener('click', () => {
+  function openSidebar() {
     sidebar.classList.add('active');
     overlay.classList.add('active');
-  });
+  }
 
-  closeBtn.addEventListener('click', () => {
+  function closeSidebar() {
     sidebar.classList.remove('active');
     overlay.classList.remove('active');
+  }
+
+  openBtn.addEventListener('click', openSidebar);
+  openBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault(); // evita o clique duplo no mobile
+    openSidebar();
   });
 
-  overlay.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    overlay.classList.remove('active');
+  closeBtn.addEventListener('click', closeSidebar);
+  closeBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    closeSidebar();
+  });
+
+  overlay.addEventListener('click', closeSidebar);
+  overlay.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    closeSidebar();
   });
 
   window.addEventListener('click', (e) => {
@@ -137,8 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.target !== openBtn &&
       e.target !== overlay
     ) {
-      sidebar.classList.remove('active');
-      overlay.classList.remove('active');
+      closeSidebar();
     }
   });
 });
