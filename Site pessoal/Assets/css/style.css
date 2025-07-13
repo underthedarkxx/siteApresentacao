@@ -6,7 +6,7 @@ a span {
 }
 
 body{
-    background-image: url('base.jpg');
+    background-image: url('../images/base.jpg');
     background-size: cover;
     background-position: center;
     transition: background-position 0.1s;
@@ -320,3 +320,47 @@ body{
     color: #66ffffcc;
 }
 
+/* Estilos para a timeline e badges de tempo */
+.time-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.card-exp {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-exp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0dcaf0, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.card-exp:hover::before {
+    transform: scaleX(1);
+}
+
+.card-exp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
+}
+
+.time-badge .badge {
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px rgba(13, 202, 240, 0.5);
+}
