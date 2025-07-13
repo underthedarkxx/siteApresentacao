@@ -1,89 +1,137 @@
+:root {
+  --cyan: #0dcaf0;
+  --cyan-bright: #33dfff;
+}
+
+/* =======================
+   Sidebar - mobile only
+   ======================= */
+
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
-    box-shadow: 5px 0 15px rgba(0, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    transition: left 0.3s ease;
-    padding: 2rem 1rem;
-    z-index: 13000;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: -260px; /* Escondida fora da tela */
+  width: 260px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--cyan);
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 13000;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar.active {
-    left: 0;
+  left: 0;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
 }
 
 .sidebar .nav-link {
-    color: var(--cyan);
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: var(--cyan);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.sidebar .nav-link:hover {
-    color: var(--cyan-bright);
-    text-shadow:
-        0 0 10px var(--cyan-bright),
-        0 0 20px var(--cyan-bright);
+.sidebar .nav-link:hover,
+.sidebar .nav-link:focus {
+  color: var(--cyan-bright);
+  text-shadow:
+    0 0 10px var(--cyan-bright),
+    0 0 20px var(--cyan-bright);
+  outline: none;
 }
 
 #closeSidebarBtn {
-    align-self: flex-end;
-    font-size: 2.5rem;
-    background: transparent;
-    border: none;
-    color: var(--cyan);
-    cursor: pointer;
-    transition: color 0.3s ease;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--cyan);
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
 }
 
-#closeSidebarBtn:hover {
-    color: var(--cyan-bright);
+#closeSidebarBtn:hover,
+#closeSidebarBtn:focus {
+  color: var(--cyan-bright);
+  outline: none;
 }
 
+/* Botão abrir sidebar - só mobile */
 #openSidebarBtn {
-    font-size: 1.5rem;
-    border: none;
-    background: transparent;
-    color: var(--cyan);
-    cursor: pointer;
-    transition: color 0.3s ease;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 14000;
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  color: var(--cyan);
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-#openSidebarBtn:hover {
-    color: var(--cyan-bright);
+#openSidebarBtn:hover,
+#openSidebarBtn:focus {
+  color: var(--cyan-bright);
+  outline: none;
 }
 
+/* Overlay para escurecer fundo quando sidebar aberta */
 #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 12000;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 12999;
 }
 
 #overlay.active {
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* ================
+   Media Queries
+   ================ */
+
+/* Desktop */
 @media (min-width: 992px) {
-    .sidebar {
-        display: none !important;
-    }
-    #overlay {
-        display: none !important;
-    }
+  /* Esconde sidebar e overlay no desktop */
+  .sidebar,
+  #overlay,
+  #openSidebarBtn {
+    display: none !important;
+  }
+
+  /* Menu desktop do bootstrap visível */
+  #navbarSupportedContent {
+    display: flex !important;
+  }
 }
+
+/* Mobile */
+@media (max-width: 991.98px) {
+  /* Menu desktop do bootstrap escondido no mobile */
+  #navbarSupportedContent {
+    display: none !important;
+  }
+}
+
