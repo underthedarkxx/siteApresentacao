@@ -1,101 +1,125 @@
-/* Mostrar cursor padrão por padrão */
-body {
-    cursor: auto !important;
-}
-
-/* Esconde cursor do sistema no desktop */
+/* ========================================
+   BLOQUEIO PERMANENTE DO CURSOR (DESKTOP)
+   ======================================== */
 @media (min-width: 992px) {
-    body, *, *:active, *:focus {
-        cursor: none !important;
-    }
+  html, body, *, *::before, *::after {
+    cursor: none !important;
+  }
+
+  a, button, input, textarea, select,
+  a:hover, a:focus, a:active,
+  button:hover, button:focus, button:active,
+  input:hover, input:focus, input:active,
+  select:hover, select:focus, select:active,
+  textarea:hover, textarea:focus, textarea:active,
+  nav, .navbar, .sidebar {
+    cursor: none !important;
+  }
+
+  /* Oculta o cursor de texto nos inputs também */
+  input, textarea, select, button {
+    caret-color: transparent;
+  }
 }
 
-/* Mantém cursor do sistema em elementos interativos no mobile */
-@media (max-width: 991.98px) {
-    a, button, input, textarea, select {
-        cursor: auto !important;
-    }
+/* ========================================
+   BLOQUEIO EXTRA: LAYER INVISÍVEL (desktop)
+   ======================================== */
+@media (min-width: 992px) {
+  .cursor-blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+    cursor: none !important;
+  }
 }
 
-/* Cursor customizado - visível apenas no desktop */
+/* ========================================
+   CURSOR CUSTOMIZADO (visível só no desktop)
+   ======================================== */
 .custom-cursor {
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--cyan);
-    background-color: transparent;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.3s;
-    z-index: 11000;
-    box-shadow:
-        0 0 5px var(--cyan),
-        0 0 10px var(--cyan),
-        0 0 20px var(--cyan),
-        0 0 30px var(--cyan),
-        0 0 40px var(--cyan);
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--cyan);
+  background-color: transparent;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease-out, background-color 0.2s, border-color 0.2s, box-shadow 0.3s;
+  z-index: 11000;
+  will-change: transform;
+  box-shadow:
+    0 0 5px var(--cyan),
+    0 0 10px var(--cyan),
+    0 0 20px var(--cyan),
+    0 0 30px var(--cyan),
+    0 0 40px var(--cyan);
 }
 
-/* Efeito de clique no desktop */
 .custom-cursor.active {
-    background-color: var(--cyan);
-    border: none;
-    box-shadow:
-        0 0 8px var(--cyan),
-        0 0 15px var(--cyan),
-        0 0 25px var(--cyan),
-        0 0 35px var(--cyan);
+  background-color: var(--cyan);
+  border: none;
+  box-shadow:
+    0 0 8px var(--cyan),
+    0 0 15px var(--cyan),
+    0 0 25px var(--cyan),
+    0 0 35px var(--cyan);
 }
 
-/* Esconde o cursor customizado no mobile */
+/* ========================================
+   MOBILE: CURSOR NORMAL + efeitos toque
+   ======================================== */
 @media (max-width: 991.98px) {
-    .custom-cursor {
-        display: none !important;
-    }
+  a, button, input, textarea, select {
+    cursor: auto !important;
+  }
+
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
-/* Ripple (toque rápido) e trail (arrasto) no mobile */
 .touch-ripple, .touch-trail {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background-color: var(--cyan);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 11000;
-    opacity: 0.6;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: var(--cyan);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 11000;
+  opacity: 0.6;
 }
 
-/* Efeito clique breve */
 .touch-ripple {
-    animation: ripple-fade 0.6s ease-out;
+  animation: ripple-fade 0.6s ease-out;
 }
 
-/* Rastro ao arrastar dedo */
 .touch-trail {
-    animation: trail-fade 0.4s ease-out;
+  animation: trail-fade 0.4s ease-out;
 }
 
-/* Animações */
 @keyframes ripple-fade {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.6;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(2);
-        opacity: 0;
-    }
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
 }
 
 @keyframes trail-fade {
-    0% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-

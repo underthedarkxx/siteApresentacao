@@ -1,12 +1,33 @@
+/*baseCss*/
 body {
     background-image: url('../images/base.jpg');
     background-size: cover;
     background-position: center;
     transition: background-position 0.1s;
-    cursor: none !important; /* Remover cursor padrão */
 }
 
-/* Cursor visível em inputs e textarea */
-input, textarea {
-    cursor: text !important;
+/* Aplica cursor invisível apenas no desktop */
+@media (min-width: 992px) {
+    body {
+        cursor: none !important;
+    }
+
+    *,
+    *::before,
+    *::after,
+    a, button, input, select, textarea {
+        cursor: none !important;
+    }
 }
+
+/* Cursor visível em inputs e textarea no mobile */
+@media (max-width: 991.98px) {
+    input,
+    textarea,
+    select,
+    button,
+    a {
+        cursor: auto !important;
+    }
+}
+
