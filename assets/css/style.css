@@ -474,3 +474,7 @@ body {
     }
 }
 
+#overlay.active {
+    pointer-events: auto;
+    pointer-events: none !important; /* desativa clique no overlay temporariamente */
+}
