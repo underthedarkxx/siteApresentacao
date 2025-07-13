@@ -1,9 +1,12 @@
-body, a, button, input, select, textarea, [onclick] {
+/* Remover cursor none de botões, links e inputs */
+body {
     cursor: none !important;
 }
-a span {
-    cursor: none !important;
+
+a, button, input, select, textarea, [onclick] {
+    cursor: auto !important;  /* Permite o cursor padrão nestes elementos */
 }
+
 
 body{
     background-image: url('../images/base.jpg');
