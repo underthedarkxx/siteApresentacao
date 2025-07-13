@@ -1,4 +1,4 @@
-/* Remover cursor none de botões, links e inputs */
+/* Remover cursor padrão no body, exceto em elementos interativos */
 body {
     cursor: none !important;
 }
@@ -7,13 +7,14 @@ a, button, input, select, textarea, [onclick] {
     cursor: auto !important;  /* Permite o cursor padrão nestes elementos */
 }
 
-
-body{
+/* Background e particulas */
+body {
     background-image: url('../images/base.jpg');
     background-size: cover;
     background-position: center;
     transition: background-position 0.1s;
 }
+
 #particles-js {
     position: fixed;
     width: 100%;
@@ -24,6 +25,7 @@ body{
     pointer-events: none;
 }
 
+/* Luz que segue o mouse */
 .mouse-light {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -40,52 +42,53 @@ body{
     transform: translate(-50%, -50%);
     transition: background 0.3s ease;
 }
+
 .bg-interativo:hover {
     background-position: 60% 40%;
 }
+
 .bg-transparent {
     background-color: transparent;
 }
+
+/* Navbar e links neon */
 .neon-navbar .nav-link {
-  color: #0dcaf0; /* Cor padrão */
+    color: #0dcaf0;
     transition: color 0.4s ease, text-shadow 0.4s ease;
     font-weight: bold;
 }
 
 .neon-navbar .nav-link:hover {
-    color: rgb(0, 225, 255); /* Ciano neon ao hover */
+    color: rgb(0, 225, 255);
     text-shadow:
         0 0 40px rgb(0, 66, 66),
         0 0 20px rgb(0, 143, 143),
         0 0 10px rgb(0, 192, 192),
         0 0 5px rgb(0, 255, 255);
 }
+
+/* Brand hover */
 .brand-hover {
     color: #0dcaf0;
-    transition: 
-        color 0.4s ease,
-        text-shadow 0.4s ease,
-        transform 0.3s ease;
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.3s ease;
     display: inline-block;
     font-weight: bold;
 }
 
 .brand-hover:hover {
-    color: #0ff; /* Neon ao hover */
-    transform: translateY(-4px); /* Levanta o texto */
+    color: #0ff;
+    transform: translateY(-4px);
     text-shadow:
         0 0 40px rgb(0, 66, 66),
         0 0 20px rgb(0, 143, 143),
         0 0 10px rgb(0, 192, 192),
         0 0 5px rgb(0, 255, 255);
 }
+
 .brand-animado span {
     display: inline-block;
     color: #0dcaf0;
-    transition: 
-        transform 0.3s ease,
-        color 0.3s ease,
-        text-shadow 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
     cursor: pointer;
 }
 
@@ -94,52 +97,58 @@ body{
     color: #0ff;
     text-shadow:
         0 0 5px rgb(17, 0, 255),
-            0 0 10px rgb(17, 0, 255),
-            0 0 20px rgb(17, 0, 255),
-            0 0 40px rgb(17, 0, 255);
+        0 0 10px rgb(17, 0, 255),
+        0 0 20px rgb(17, 0, 255),
+        0 0 40px rgb(17, 0, 255);
 }
 
-.btn-hover-ciano{
+/* Botões com efeito hover */
+.btn-hover-ciano {
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.btn-hover-ciano:hover{
+.btn-hover-ciano:hover {
     color: rgb(0, 4, 255);
     border-color: #0ff;
     background-color: rgba(17, 0, 255, 0.253);
-    box-shadow: 
+    box-shadow:
         0 0 5px rgb(0, 255, 255),
         0 0 10px rgb(0, 192, 192),
         0 0 20px rgb(0, 143, 143),
         0 0 40px rgb(0, 66, 66);
-    text-shadow: 
+    text-shadow:
         0 0 40px rgb(0, 66, 66),
         0 0 20px rgb(0, 143, 143),
         0 0 10px rgb(0, 192, 192),
         0 0 5px rgb(0, 255, 255);
 }
 
+/* Hover glow */
 .hover-glow:hover {
     box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
     transform: translateY(-5px);
     transition: all 0.3s ease;
 }
+
+/* Texto neon */
 .neon-text {
     color: #0d2ff0;
     text-shadow:
-    0 0 5px rgba(0, 255, 255, 0.199),
-    0 0 10px rgba(0, 255, 255, 0.199),
-    0 0 20px rgba(0, 255, 255, 0.199),
-    0 0 40px rgba(0, 255, 255, 0.199);
+        0 0 5px rgba(0, 255, 255, 0.199),
+        0 0 10px rgba(0, 255, 255, 0.199),
+        0 0 20px rgba(0, 255, 255, 0.199),
+        0 0 40px rgba(0, 255, 255, 0.199);
 }
+
 .neon-text2 {
     color: #0d2ff0;
     text-shadow:
-    0 0 5px rgb(0, 255, 255),
-    0 0 10px rgba(0, 255, 255),
-    0 0 20px rgba(0, 255, 255),
-    0 0 40px rgba(0, 255, 255);
+        0 0 5px rgb(0, 255, 255),
+        0 0 10px rgba(0, 255, 255),
+        0 0 20px rgba(0, 255, 255),
+        0 0 40px rgba(0, 255, 255);
 }
+
 .neon-text3 {
     color: #0d2ff0;
     text-shadow:
@@ -149,6 +158,7 @@ body{
         0 0 20px rgba(0, 255, 255, 0.1);
 }
 
+/* Timeline */
 .timeline-horizontal {
     gap: 1rem;
     position: relative;
@@ -159,7 +169,7 @@ body{
     flex: 1 1 150px;
     position: relative;
     min-width: 120px;
-    }
+}
 
 .timeline-step .circle {
     width: 24px;
@@ -179,21 +189,23 @@ body{
 }
 
 .border-line {
-    border-top: 2px solid #00ffff; /* cor azul neon */
+    border-top: 2px solid #00ffff;
     width: 100%;
     max-width: 258px;
     margin: 20px auto;
 }
 
+/* Card projeto */
 .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 255, 255, 0.2);
-        }
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 255, 255, 0.2);
+}
 
+/* Cursor personalizado */
 .custom-cursor {
     width: 24px;
     height: 24px;
@@ -201,7 +213,7 @@ body{
     background-color: transparent;
     border-radius: 50%;
     position: fixed;
-    pointer-events: none;
+    pointer-events: none; /* Permite clicar nos elementos abaixo */
     transform: translate(-50%, -50%);
     transition: background-color 0.2s, border-color 0.2s, box-shadow 0.3s;
     z-index: 11000;
@@ -223,12 +235,12 @@ body{
         0 0 35px cyan;
 }
 
-/* Container do currículo, para ficar centralizado e destacar */
+/* Container do currículo */
 .resume-container {
     max-width: 720px;
     margin: 100px auto 50px auto;
     padding: 2rem 2.5rem;
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo escuro translúcido */
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
     box-shadow:
         0 0 10px #0dcaf0,
@@ -250,7 +262,7 @@ body{
         0 0 100px #0dcaf0;
 }
 
-/* Links com hover neon */
+/* Links com hover neon no currículo */
 .resume-container a {
     color: #0dcaf0;
     text-decoration: none;
@@ -266,7 +278,7 @@ body{
     outline: none;
 }
 
-/* Listas */
+/* Listas no currículo */
 .resume-container ul {
     padding-left: 1.25rem;
     margin-bottom: 1.5rem;
@@ -276,11 +288,12 @@ body{
     margin-bottom: 0.5rem;
 }
 
-/* Parágrafos */
+/* Parágrafos no currículo */
 .resume-container p {
     margin-bottom: 0.8rem;
 }
 
+/* Fundo translúcido e blur para currículo */
 .resume-container {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(8px);
@@ -290,7 +303,7 @@ body{
         0 0 16px rgba(0, 255, 255, 0.2);
 }
 
-/* Ajuste responsivo */
+/* Ajuste responsivo para currículo */
 @media (max-width: 768px) {
     .resume-container {
         margin: 80px 1rem 40px 1rem;
@@ -299,8 +312,9 @@ body{
     }
 }
 
+/* Fundo preto translúcido para inputs e textarea */
 .translucent-bg {
-    background: rgba(0, 0, 0, 0.3); /* preto com transparência */
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 12px;
@@ -309,21 +323,19 @@ body{
     color: #0dcaf0;
 }
 
-/* Fundo preto sólido para inputs e textarea */
 .translucent-bg input,
 .translucent-bg textarea {
-    background-color: #000000dd; /* preto com um pouco de transparência */
+    background-color: #000000dd;
     color: #0dcaf0;
     border: 1px solid #0dcaf0;
 }
 
-/* Mantém a cor do texto e placeholder */
 .translucent-bg input::placeholder,
 .translucent-bg textarea::placeholder {
     color: #66ffffcc;
 }
 
-/* Estilos para a timeline e badges de tempo */
+/* Timeline badges */
 .time-badge {
     animation: pulse 2s infinite;
 }
@@ -367,3 +379,4 @@ body{
     letter-spacing: 1px;
     box-shadow: 0 0 10px rgba(13, 202, 240, 0.5);
 }
+
