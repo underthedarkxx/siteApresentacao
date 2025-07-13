@@ -15,29 +15,46 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-transparent fixed-top" data-bs-theme="dark">
-        <div class="container-fluid w-100 w-lg-75 p-3 d-flex">
-            <a class="navbar-brand brand-animado" href="/index.html">
-                <span>R</span><span>o</span><span>b</span><span>e</span><span>r</span><span>t</span><span>o</span>
-                <span>&nbsp;|&nbsp;</span>
-                <span>D</span><span>E</span><span>V</span>
+        <div class="container-fluid w-100 w-lg-75 p-3 d-flex align-items-center">
+            <a class="navbar-brand brand-animado" href="index.html">
+            <span>R</span><span>o</span><span>b</span><span>e</span><span>r</span><span>t</span><span>o</span>
+            <span>&nbsp;|&nbsp;</span>
+            <span>D</span><span>E</span><span>V</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+            <!-- Botão hamburguer para abrir sidebar no mobile -->
+            <button id="openSidebarBtn" class="btn btn-outline-info d-lg-none ms-auto" aria-label="Abrir menu">
+            &#9776;
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto neon-navbar">
-                    <li class="nav-item"><strong><a class="nav-link text-info" href="/index.html">Home</a></strong></li>
-                    <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/sobre.html">Sobre</a></strong></li>
-                    <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/experiencia.html">Experiência</a></strong></li>
-                    <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/projetos.html">Projetos</a></strong></li>
-                    <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/resume.html">Resume</a></strong></li>
-                    <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/contato.html">Contatos</a></strong></li>
-                </ul>
+
+            <!-- Menu original para desktop (escondido no mobile) -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto neon-navbar">
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/index.html">Home</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/sobre.html">Sobre</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/experiencia.html">Experiência</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/projetos.html">Projetos</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/resume.html">Resume</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/contato.html">Contatos</a></strong></li>
+            </ul>
             </div>
         </div>
+
+        <!-- Sidebar lateral -->
+        <div id="sidebar" class="sidebar">
+            <button id="closeSidebarBtn" aria-label="Fechar menu">&times;</button>
+            <nav>
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/pages/sobre.html" class="nav-link">Sobre</a>
+            <a href="/pages/experiencia.html" class="nav-link">Experiência</a>
+            <a href="/pages/projetos.html" class="nav-link">Projetos</a>
+            <a href="/pages/resume.html" class="nav-link">Resume</a>
+            <a href="/pages/contato.html" class="nav-link">Contatos</a>
+            </nav>
+        </div>
     </nav>
+
+    <div id="overlay"></div>
 
     <!-- Conteúdo principal -->
     <main class="resume-container" style="margin-top: 100px;">
