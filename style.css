@@ -1,0 +1,322 @@
+body, a, button, input, select, textarea, [onclick] {
+    cursor: none !important;
+}
+a span {
+    cursor: none !important;
+}
+
+body{
+    background-image: url('base.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.1s;
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mouse-light {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0) 90%);
+    mix-blend-mode: screen;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s ease;
+}
+.bg-interativo:hover {
+    background-position: 60% 40%;
+}
+.bg-transparent {
+    background-color: transparent;
+}
+.neon-navbar .nav-link {
+  color: #0dcaf0; /* Cor padrão */
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+    font-weight: bold;
+}
+
+.neon-navbar .nav-link:hover {
+    color: rgb(0, 225, 255); /* Ciano neon ao hover */
+    text-shadow:
+        0 0 40px rgb(0, 66, 66),
+        0 0 20px rgb(0, 143, 143),
+        0 0 10px rgb(0, 192, 192),
+        0 0 5px rgb(0, 255, 255);
+}
+.brand-hover {
+    color: #0dcaf0;
+    transition: 
+        color 0.4s ease,
+        text-shadow 0.4s ease,
+        transform 0.3s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.brand-hover:hover {
+    color: #0ff; /* Neon ao hover */
+    transform: translateY(-4px); /* Levanta o texto */
+    text-shadow:
+        0 0 40px rgb(0, 66, 66),
+        0 0 20px rgb(0, 143, 143),
+        0 0 10px rgb(0, 192, 192),
+        0 0 5px rgb(0, 255, 255);
+}
+.brand-animado span {
+    display: inline-block;
+    color: #0dcaf0;
+    transition: 
+        transform 0.3s ease,
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.brand-animado span:hover {
+    transform: translateY(-5px);
+    color: #0ff;
+    text-shadow:
+        0 0 5px rgb(17, 0, 255),
+            0 0 10px rgb(17, 0, 255),
+            0 0 20px rgb(17, 0, 255),
+            0 0 40px rgb(17, 0, 255);
+}
+
+.btn-hover-ciano{
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-hover-ciano:hover{
+    color: rgb(0, 4, 255);
+    border-color: #0ff;
+    background-color: rgba(17, 0, 255, 0.253);
+    box-shadow: 
+        0 0 5px rgb(0, 255, 255),
+        0 0 10px rgb(0, 192, 192),
+        0 0 20px rgb(0, 143, 143),
+        0 0 40px rgb(0, 66, 66);
+    text-shadow: 
+        0 0 40px rgb(0, 66, 66),
+        0 0 20px rgb(0, 143, 143),
+        0 0 10px rgb(0, 192, 192),
+        0 0 5px rgb(0, 255, 255);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+.neon-text {
+    color: #0d2ff0;
+    text-shadow:
+    0 0 5px rgba(0, 255, 255, 0.199),
+    0 0 10px rgba(0, 255, 255, 0.199),
+    0 0 20px rgba(0, 255, 255, 0.199),
+    0 0 40px rgba(0, 255, 255, 0.199);
+}
+.neon-text2 {
+    color: #0d2ff0;
+    text-shadow:
+    0 0 5px rgb(0, 255, 255),
+    0 0 10px rgba(0, 255, 255),
+    0 0 20px rgba(0, 255, 255),
+    0 0 40px rgba(0, 255, 255);
+}
+.neon-text3 {
+    color: #0d2ff0;
+    text-shadow:
+        0 0 3px rgba(0, 255, 255, 0.603),
+        0 0 6px rgba(0, 255, 255, 0.473),
+        0 0 12px rgba(0, 255, 255, 0.253),
+        0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.timeline-horizontal {
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.timeline-step {
+    flex: 1 1 150px;
+    position: relative;
+    min-width: 120px;
+    }
+
+.timeline-step .circle {
+    width: 24px;
+    height: 24px;
+    background-color: #0dcaf0;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #0dcaf0;
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #0dcaf0;
+    align-self: center;
+    min-width: 30px;
+}
+
+.border-line {
+    border-top: 2px solid #00ffff; /* cor azul neon */
+    width: 100%;
+    max-width: 258px;
+    margin: 20px auto;
+}
+
+.project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 255, 255, 0.2);
+        }
+
+
+.custom-cursor {
+    width: 24px;
+    height: 24px;
+    border: 2px solid cyan;
+    background-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.3s;
+    z-index: 11000;
+    box-shadow:
+        0 0 5px cyan,
+        0 0 10px cyan,
+        0 0 20px cyan,
+        0 0 30px cyan,
+        0 0 40px cyan;
+}
+
+.custom-cursor.active {
+    background-color: cyan;
+    border: none;
+    box-shadow:
+        0 0 8px cyan,
+        0 0 15px cyan,
+        0 0 25px cyan,
+        0 0 35px cyan;
+}
+
+/* Container do currículo, para ficar centralizado e destacar */
+.resume-container {
+    max-width: 720px;
+    margin: 100px auto 50px auto;
+    padding: 2rem 2.5rem;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo escuro translúcido */
+    border-radius: 1rem;
+    box-shadow:
+        0 0 10px #0dcaf0,
+        0 0 20px #0dcaf0;
+    color: #0dcaf0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    user-select: text;
+}
+
+/* Títulos do currículo com efeito neon */
+.resume-container h1,
+.resume-container h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow:
+        0 0 2px #0dcaf0,
+        0 0 5px #0dcaf0,
+        0 0 100px #0dcaf0;
+}
+
+/* Links com hover neon */
+.resume-container a {
+    color: #0dcaf0;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.resume-container a:hover,
+.resume-container a:focus {
+    color: #00ffff;
+    text-shadow:
+        0 0 10px #00ffff,
+        0 0 20px #00ffff;
+    outline: none;
+}
+
+/* Listas */
+.resume-container ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Parágrafos */
+.resume-container p {
+    margin-bottom: 0.8rem;
+}
+
+.resume-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 0 8px rgba(0, 255, 255, 0.3),
+        0 0 16px rgba(0, 255, 255, 0.2);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .resume-container {
+        margin: 80px 1rem 40px 1rem;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+.translucent-bg {
+    background: rgba(0, 0, 0, 0.3); /* preto com transparência */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    color: #0dcaf0;
+}
+
+/* Fundo preto sólido para inputs e textarea */
+.translucent-bg input,
+.translucent-bg textarea {
+    background-color: #000000dd; /* preto com um pouco de transparência */
+    color: #0dcaf0;
+    border: 1px solid #0dcaf0;
+}
+
+/* Mantém a cor do texto e placeholder */
+.translucent-bg input::placeholder,
+.translucent-bg textarea::placeholder {
+    color: #66ffffcc;
+}
+
