@@ -460,11 +460,6 @@ body {
     z-index: 12000; /* abaixo da sidebar (13000) */
 }
 
-#overlay.active {
-    opacity: 1;
-    pointer-events: auto; /* bloqueia clicks quando visível */
-}
-
 @media (min-width: 992px) {
     .sidebar {
         display: none !important;
