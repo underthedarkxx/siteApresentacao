@@ -105,3 +105,23 @@ window.addEventListener('mousemove', e => {
     cursor.classList.remove('active');
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const openBtn = document.getElementById('openSidebarBtn');
+  const closeBtn = document.getElementById('closeSidebarBtn');
+
+  openBtn.addEventListener('click', () => {
+    sidebar.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (sidebar.classList.contains('active') && !sidebar.contains(e.target) && e.target !== openBtn) {
+      sidebar.classList.remove('active');
+    }
+  });
+});
