@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('closeSidebarBtn');
   const overlay = document.getElementById('overlay');
 
+  if (!sidebar || !openBtn || !closeBtn || !overlay) return;
+  
   function openSidebar() {
     sidebar.classList.add('active');
     overlay.classList.add('active');
