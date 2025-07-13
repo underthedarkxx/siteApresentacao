@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   openBtn.addEventListener('click', openSidebar);
   openBtn.addEventListener('touchstart', (e) => {
-    e.preventDefault(); // evita o clique duplo no mobile
+    e.preventDefault();
     openSidebar();
   });
 
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeSidebar();
   });
 
-  window.addEventListener('click', (e) => {
+  window.addEventListener('pointerdown', (e) => {
     if (
       sidebar.classList.contains('active') &&
       !sidebar.contains(e.target) &&
