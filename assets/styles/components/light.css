@@ -10,6 +10,7 @@
     border-radius: 50%;
     background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0) 90%);
     mix-blend-mode: screen;
-    z-index: 0;
+    z-index: 1000; /* aumenta aqui */
     transform: translate(-50%, -50%);
 }
+
