@@ -1,0 +1,32 @@
+body, *, *:active, *:focus {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--cyan);
+    background-color: transparent;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.3s;
+    z-index: 11000;
+    box-shadow:
+        0 0 5px var(--cyan),
+        0 0 10px var(--cyan),
+        0 0 20px var(--cyan),
+        0 0 30px var(--cyan),
+        0 0 40px var(--cyan);
+}
+
+.custom-cursor.active {
+    background-color: var(--cyan);
+    border: none;
+    box-shadow:
+        0 0 8px var(--cyan),
+        0 0 15px var(--cyan),
+        0 0 25px var(--cyan),
+        0 0 35px var(--cyan);
+}

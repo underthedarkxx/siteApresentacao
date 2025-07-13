@@ -1,0 +1,48 @@
+.neon-navbar .nav-link {
+    color: var(--cyan);
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+    font-weight: bold;
+}
+
+.neon-navbar .nav-link:hover {
+    color: rgb(0, 225, 255);
+    text-shadow:
+        0 0 40px rgb(0, 66, 66),
+        0 0 20px rgb(0, 143, 143),
+        0 0 10px rgb(0, 192, 192),
+        0 0 5px rgb(0, 255, 255);
+}
+
+.brand-hover {
+    color: var(--cyan);
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.3s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.brand-hover:hover {
+    color: var(--cyan-bright);
+    transform: translateY(-4px);
+    text-shadow:
+        0 0 40px rgb(0, 66, 66),
+        0 0 20px rgb(0, 143, 143),
+        0 0 10px rgb(0, 192, 192),
+        0 0 5px rgb(0, 255, 255);
+}
+
+.brand-animado span {
+    display: inline-block;
+    color: var(--cyan);
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.brand-animado span:hover {
+    transform: translateY(-5px);
+    color: rgb(17, 0, 255);
+    text-shadow:
+        0 0 5px rgb(17, 0, 255),
+        0 0 10px rgb(17, 0, 255),
+        0 0 20px rgb(17, 0, 255),
+        0 0 40px rgb(17, 0, 255);
+}

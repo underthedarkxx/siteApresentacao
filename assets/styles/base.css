@@ -1,0 +1,12 @@
+body {
+    background-image: url('../images/base.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.1s;
+    cursor: none !important; /* Remover cursor padrão */
+}
+
+/* Cursor visível em inputs e textarea */
+input, textarea {
+    cursor: text !important;
+}

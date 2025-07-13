@@ -1,0 +1,17 @@
+@import 'reset.css';
+@import 'variables.css';
+@import 'base.css';
+@import 'typography.css';
+
+@import 'components/cursor.css';
+@import 'components/particles.css';
+@import 'components/light.css';
+@import 'components/navbar.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/sidebar.css';
+
+@import 'layout/background.css';
+@import 'layout/translucent.css';
+@import 'layout/timeline.css';
+@import 'layout/resume.css';

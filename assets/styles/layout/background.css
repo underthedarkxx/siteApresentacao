@@ -1,0 +1,14 @@
+body {
+    background-image: url('../../images/base.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.1s;
+}
+
+.bg-interativo:hover {
+    background-position: 60% 40%;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
