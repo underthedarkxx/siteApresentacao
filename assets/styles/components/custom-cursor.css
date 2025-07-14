@@ -1,23 +1,19 @@
-/* Variáveis para cores (defina no :root do seu CSS global) */
 :root {
   --cyan-light: #00ffff;
   --cyan-active: #00e0ff;
 }
 
-/* Oculta o cursor padrão no desktop */
 @media (min-width: 992px) {
-  html, body, a, button, div, span, section, header, footer, main {
+  body.cursor-ready * {
     cursor: none !important;
   }
-  
-  /* Garante que não apareça em foco/ativo */
-  *:focus,
-  *:active {
+
+  body.cursor-ready *:focus,
+  body.cursor-ready *:active {
     cursor: none !important;
   }
 }
 
-/* Estilo do cursor customizado */
 .mouse-light {
   position: fixed;
   top: 0;
@@ -35,7 +31,6 @@
   will-change: opacity, background;
 }
 
-/* Cursor personalizado */
 .custom-cursor {
   position: fixed;
   width: 16px;
@@ -50,17 +45,17 @@
   will-change: transform, opacity, background-color;
 }
 
-/* Cursor ativo sobre elemento clicável */
 .custom-cursor.active {
   transform: translate(-50%, -50%) scale(1.6);
   background-color: var(--cyan-active);
 }
+
 #particles-js {
   pointer-events: none;
-  position: fixed; /* provavelmente já está assim */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 0; /* fica atrás do cursor customizado */
+  z-index: 0;
 }

@@ -2,8 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const cursor = document.querySelector(".custom-cursor");
   if (!cursor) return;
 
-  cursor.style.left = "-100px";
-  cursor.style.top = "-100px";
+  // Inicializa o cursor na posição correta ao clicar
+  document.addEventListener("mousedown", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.opacity = "1";
+  });
+
+  // Inicializa o cursor na posição correta ao entrar na janela
+  document.addEventListener("mouseenter", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.opacity = "1";
+  });
 
   const isClickable = (element) => {
     if (!element) return false;
@@ -39,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cursor.style.opacity = "1";
     });
 
-    // Se a tela for redimensionada para mobile, esconder cursor
     window.addEventListener("resize", () => {
       if (window.innerWidth < 992) {
         cursor.style.display = "none";
@@ -47,11 +57,14 @@ document.addEventListener("DOMContentLoaded", () => {
         cursor.style.display = "block";
       }
     });
-
   } else {
     cursor.style.display = "none";
   }
+
+  // Ativa o estilo que oculta o cursor padrão
+  document.body.classList.add("cursor-ready");
 });
+
 
 
 
