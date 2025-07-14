@@ -123,3 +123,13 @@
     opacity: 0;
   }
 }
+
+@media (min-width: 992px) {
+    body *:focus,
+    body *:active {
+        cursor: none !important;
+    }
+}
+body, html {
+    cursor: none !important;
+}

@@ -1,0 +1,47 @@
+/* Oculta o cursor padrão no desktop */
+@media (min-width: 992px) {
+  html, body, a, button, div, span, section, header, footer, main {
+    cursor: none !important;
+  }
+  
+  *:focus,
+  *:active {
+    cursor: none !important;
+  }
+}
+
+/* Estilo do cursor customizado */
+.mouse-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0) 90%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+/* Cursor personalizado */
+.custom-cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background-color: #00ffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  opacity: 0;
+}
+
+/* Quando está sobre um elemento clicável */
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1.6);
+  background-color: #00e0ff;
+}
