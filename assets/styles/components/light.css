@@ -132,7 +132,7 @@ h1.display-4 {
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.2),
               0 0 20px rgba(0, 255, 255, 0.15);
   transition: 0.3s ease;
-  cursor: pointer;
+  cursor: pointer; /* Mantém cursor pointer aqui */
 }
 
 .btn-neon:hover {
@@ -172,6 +172,7 @@ h1.display-4 {
   transition: 0.3s ease;
   backdrop-filter: blur(4px);
   background: rgba(0, 255, 255, 0.02);
+  cursor: pointer; /* Mantém cursor pointer */
 }
 
 .social-icon:hover {
@@ -253,18 +254,9 @@ h1.display-4 {
   }
 }
 
+/* CURSOR para digitação em input/textarea */
 input, textarea {
   cursor: text !important;
-}
-
-@media (min-width: 992px) {
-  html, body {
-    cursor: none !important;
-  }
-
-  a, button, input, select, textarea, [onclick], .clickable {
-    cursor: auto !important;
-  }
 }
 
 .neon-text3 {

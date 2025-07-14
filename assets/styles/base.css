@@ -6,20 +6,6 @@ body {
     transition: background-position 0.1s;
 }
 
-/* Aplica cursor invisível apenas no desktop */
-@media (min-width: 992px) {
-  html, body, * {
-    cursor: none !important;
-  }
-
-  input, textarea {
-    caret-color: transparent;
-  }
-
-  button, a {
-    cursor: none !important;
-  }
-}
 
 
 /* Cursor visível em inputs e textarea no mobile */

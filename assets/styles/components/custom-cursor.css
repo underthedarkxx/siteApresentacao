@@ -1,9 +1,16 @@
+/* Variáveis para cores (defina no :root do seu CSS global) */
+:root {
+  --cyan-light: #00ffff;
+  --cyan-active: #00e0ff;
+}
+
 /* Oculta o cursor padrão no desktop */
 @media (min-width: 992px) {
   html, body, a, button, div, span, section, header, footer, main {
     cursor: none !important;
   }
   
+  /* Garante que não apareça em foco/ativo */
   *:focus,
   *:active {
     cursor: none !important;
@@ -25,23 +32,35 @@
   transition: opacity 0.3s ease, background 0.3s ease;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  will-change: opacity, background;
 }
+
 /* Cursor personalizado */
 .custom-cursor {
   position: fixed;
   width: 16px;
   height: 16px;
-  background-color: #00ffff;
+  background-color: var(--cyan-light);
   border-radius: 50%;
   pointer-events: none;
   z-index: 1001;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease, opacity 0.1s ease;
-  opacity: 0;
+  transition: transform 0.1s ease, opacity 0.1s ease, background-color 0.2s ease;
+  opacity: 1;
+  will-change: transform, opacity, background-color;
 }
 
-/* Quando está sobre um elemento clicável */
+/* Cursor ativo sobre elemento clicável */
 .custom-cursor.active {
   transform: translate(-50%, -50%) scale(1.6);
-  background-color: #00e0ff;
+  background-color: var(--cyan-active);
+}
+#particles-js {
+  pointer-events: none;
+  position: fixed; /* provavelmente já está assim */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; /* fica atrás do cursor customizado */
 }

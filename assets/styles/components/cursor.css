@@ -1,44 +1,4 @@
 /* ========================================
-   BLOQUEIO PERMANENTE DO CURSOR (DESKTOP)
-   ======================================== */
-@media (min-width: 992px) {
-  html, body, *, *::before, *::after {
-    cursor: none !important;
-  }
-
-  a, button, input, textarea, select,
-  a:hover, a:focus, a:active,
-  button:hover, button:focus, button:active,
-  input:hover, input:focus, input:active,
-  select:hover, select:focus, select:active,
-  textarea:hover, textarea:focus, textarea:active,
-  nav, .navbar, .sidebar {
-    cursor: none !important;
-  }
-
-  /* Oculta o cursor de texto nos inputs também */
-  input, textarea, select, button {
-    caret-color: transparent;
-  }
-}
-
-/* ========================================
-   BLOQUEIO EXTRA: LAYER INVISÍVEL (desktop)
-   ======================================== */
-@media (min-width: 992px) {
-  .cursor-blocker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    pointer-events: none;
-    cursor: none !important;
-  }
-}
-
-/* ========================================
    CURSOR CUSTOMIZADO (visível só no desktop)
    ======================================== */
 .custom-cursor {
@@ -125,11 +85,9 @@
 }
 
 @media (min-width: 992px) {
-    body *:focus,
-    body *:active {
-        cursor: none !important;
-    }
-}
-body, html {
+  body, body *:focus,
+  body *:active {
     cursor: none !important;
+  }
 }
+

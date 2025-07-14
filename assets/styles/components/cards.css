@@ -1,6 +1,7 @@
 /*cards.css*/
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
 }
 
 .project-card:hover {
@@ -12,6 +13,7 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .card-exp::before {
