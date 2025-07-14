@@ -267,3 +267,11 @@ input, textarea {
   }
 }
 
+.neon-text3 {
+  color: var(--cyan);
+  text-shadow:
+    0 0 6px var(--cyan-shadow1),
+    0 0 12px var(--cyan-shadow2),
+    0 0 20px var(--cyan-shadow3),
+    0 0 30px var(--cyan-bright);
+}
