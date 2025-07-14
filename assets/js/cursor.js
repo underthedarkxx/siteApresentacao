@@ -1,23 +1,29 @@
 const cursor = document.querySelector('.custom-cursor');
 
-// Força ocultar cursor do sistema imediatamente
+// Inicializa fora da tela (caso o CSS falhe por algum motivo)
+cursor.style.left = '-100px';
+cursor.style.top = '-100px';
+
+// Oculta cursor do sistema
 const forceHideCursor = () => {
   document.body.style.cursor = 'none';
   document.documentElement.style.cursor = 'none';
 };
 
-if (window.innerWidth >= 992) {
-  // Reforço contínuo: impede reaparecimento do cursor nativo mesmo com travamentos
-  setInterval(forceHideCursor, 50);
+// Reforço contínuo usando requestAnimationFrame
+function loopHideCursor() {
+  forceHideCursor();
+  requestAnimationFrame(loopHideCursor);
+}
 
-  forceHideCursor(); // força logo no início
+if (window.innerWidth >= 992) {
+  forceHideCursor(); // Aplica imediatamente
+  loopHideCursor();  // Inicia o loop
 
   // Move o cursor customizado com o mouse
   window.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
-
-    forceHideCursor(); // Reforça a cada movimento
 
     const el = document.elementFromPoint(e.clientX, e.clientY);
 
@@ -38,15 +44,15 @@ if (window.innerWidth >= 992) {
     }
   });
 
-  // Evita cursor visível após cliques
+  // Garante que cliques não revelem o cursor do sistema
   ['mousedown', 'mouseup', 'click'].forEach(evt => {
     document.addEventListener(evt, () => {
       forceHideCursor();
-    }, true); // useCapture = true
+    }, true);
   });
 }
 
-// Efeitos de toque no mobile
+// Toques no mobile
 if (window.innerWidth < 992) {
   document.addEventListener('touchstart', function (e) {
     const touch = e.touches[0];
@@ -76,5 +82,3 @@ if (window.innerWidth < 992) {
     setTimeout(() => dot.remove(), 400);
   }
 }
-
-

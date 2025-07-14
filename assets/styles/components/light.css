@@ -1,18 +1,253 @@
-/*light.css*/
-
-.mouse-light {
-    opacity: 0;
-    transition: opacity 0.3s ease, background 0.3s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    pointer-events: none;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0) 90%);
-    mix-blend-mode: screen;
-    z-index: 1000; /* aumenta aqui */
-    transform: translate(-50%, -50%);
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d0d;
+  color: #00f6ff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === LIGHT EFFECT === */
+.mouse-light {
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0) 90%);
+  mix-blend-mode: screen;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
+/* === TITLES === */
+h1.display-4 {
+  font-size: 3rem;
+  color: #00f6ff;
+  text-shadow:
+    0 0 6px rgba(5, 245, 245, 0.699),
+    0 0 12px rgba(4, 214, 214, 0.959),
+    0 0 18px rgba(4, 214, 214, 0.445);
+}
+
+.neon-outline {
+  color: rgb(1, 46, 114);
+  text-shadow:
+    0 0 6px rgba(5, 245, 245, 0.699),
+    0 0 12px rgba(4, 214, 214, 0.959),
+    0 0 18px rgba(4, 214, 214, 0.445);
+}
+
+/* === MAIN AREA === */
+.resume-container {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.main-responsive {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 0 1rem;
+}
+
+/* === FORM === */
+.glass-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.glass-form label {
+  color: #00ffffcc;
+  font-weight: 500;
+}
+
+.glass-form input,
+.glass-form textarea {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #00f6ff;
+  caret-color: #00ffff;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.glass-form input:focus,
+.glass-form textarea:focus {
+  outline: none;
+  border-color: rgba(0, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00f6ff;
+}
+
+.glass-form input::placeholder,
+.glass-form textarea::placeholder {
+  color: rgba(0, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.glass-form textarea {
+  resize: none;
+}
+
+/* === BUTTON === */
+.btn-neon {
+  background: transparent;
+  color: #00ffff;
+  border: 1px solid #00ffff;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-shadow: 0 0 5px #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2),
+              0 0 20px rgba(0, 255, 255, 0.15);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-neon:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6),
+              0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+/* === SOCIAL ICONS === */
+.neon-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.neon-social .icon-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00e7ff;
+  font-size: 1.5rem;
+  border: 2px solid rgba(0, 255, 255, 0.15);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s ease;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 255, 255, 0.02);
+}
+
+.social-icon:hover {
+  background: rgba(0, 255, 255, 0.15);
+  color: #000;
+  transform: scale(1.12);
+  box-shadow:
+    0 0 4px rgba(0, 255, 255, 0.2),
+    0 0 8px rgba(0, 255, 255, 0.15),
+    0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+  transform: rotate(360deg);
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-responsive {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 1rem;
+  }
+
+  .glass-form {
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.08);
+  }
+
+  .glass-form input,
+  .glass-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .btn-neon {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .neon-social .icon-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-form {
+    padding: 0.75rem;
+  }
+
+  h1.display-4 {
+    font-size: 1.6rem;
+  }
+
+  .social-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+
+  .btn-neon {
+    padding: 0.6rem;
+  }
+}
