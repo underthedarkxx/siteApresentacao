@@ -35,3 +35,12 @@ body {
   cursor: none !important;
   z-index: 9999;
 }
+.download-curriculo,
+.download-curriculo * {
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
+
