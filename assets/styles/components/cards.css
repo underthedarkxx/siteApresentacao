@@ -1,55 +1,55 @@
-/*cards.css*/
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    will-change: transform;
+/* cards.css */
+
+/* --- Títulos em Ciano --- */
+.project-card-main h2,
+.small-card h3,
+.card-title {
+    color: var(--cyan-bright) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 255, 255, 0.2);
+/* --- Projeto em Destaque --- */
+.project-card-main {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 1px solid var(--cyan-bright) !important;
+    box-shadow: var(--neon-shadow);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
 }
 
-.card-exp {
+.project-card-main:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 0 30px var(--cyan-shadow2);
+}
+
+/* --- Cards Secundários --- */
+.small-card {
     transition: all 0.3s ease;
-    position: relative;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(13, 202, 240, 0.2) !important;
+}
+
+.small-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cyan-bright) !important;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+
+/* --- Elementos de Interface (Terminal) --- */
+.terminal-frame {
+    background: #000;
+    border-radius: 10px;
     overflow: hidden;
-    will-change: transform;
+    border: 1px solid #333;
 }
 
-.card-exp::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.img-destaque-grande {
     width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--cyan), transparent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
+    height: 400px;
+    object-fit: contain; /* Garante visibilidade total da sua interface */
 }
 
-.card-exp:hover::before {
-    transform: scaleX(1);
-}
-
-.card-exp:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
-}
-
-.time-badge {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.time-badge .badge {
-    font-weight: bold;
-    letter-spacing: 1px;
-    box-shadow: 0 0 10px rgba(13, 202, 240, 0.5);
+@media (max-width: 768px) {
+    .img-destaque-grande { height: 250px; }
 }
