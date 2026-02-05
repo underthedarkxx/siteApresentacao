@@ -1,0 +1,47 @@
+/*trsnslucentCss*/
+.translucent-bg {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    color: var(--cyan);
+}
+
+.translucent-bg input,
+.translucent-bg textarea {
+    background-color: #000000dd;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+}
+
+.translucent-bg input::placeholder,
+.translucent-bg textarea::placeholder {
+    color: #66ffffcc;
+}
+
+.resume-container {
+    max-width: 720px;
+    margin: 100px auto 50px auto;
+    padding: 2rem 2.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow:
+        0 0 8px rgba(0, 255, 255, 0.3),
+        0 0 16px rgba(0, 255, 255, 0.2);
+    color: var(--cyan);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    user-select: text;
+}
+
+/* Ajuste responsivo para currículo */
+@media (max-width: 768px) {
+    .resume-container {
+        margin: 80px 1rem 40px 1rem;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roberto Dias</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+
+
+
+</head>
+<body class="bg-transparent">
+  <div id="particles-js"></div>
+  <div class="mouse-light"></div>
+  <div class="custom-cursor"></div>
+
+  <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-transparent fixed-top" data-bs-theme="dark">
+        <div class="container-fluid w-100 w-lg-75 p-3 d-flex align-items-center">
+            <a class="navbar-brand brand-animado" href="/index.html">
+            <span class="text-info">R</span class="text-info"><span class="text-info">o</span><span class="text-info">b</span><span class="text-info">e</span><span class="text-info">r</span><span class="text-info">t</span><span class="text-info">o</span>
+            <span class="text-info">&nbsp;|&nbsp;</span>
+            <span class="text-info">D</span class="text-info"><span class="text-info">E</span ><span class="text-info">V</span>
+            </a>
+
+            <!-- Botão hamburguer para abrir sidebar no mobile -->
+            <button id="openSidebarBtn" class="btn btn-outline-info d-lg-none ms-auto" aria-label="Abrir menu">
+            &#9776;
+            </button>
+
+            <!-- Menu original para desktop (escondido no mobile) -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto neon-navbar">
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/index.html">Home</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/sobre.html">Sobre</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/experiencia.html">Experiência</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/projetos.html">Projetos</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/resume.html">Resume</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/contato.html">Contatos</a></strong></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Sidebar lateral -->
+        <div id="sidebar" class="sidebar">
+            <button id="closeSidebarBtn" aria-label="Fechar menu">&times;</button>
+            <nav>
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/pages/sobre.html" class="nav-link">Sobre</a>
+            <a href="/pages/experiencia.html" class="nav-link">Experiência</a>
+            <a href="/pages/projetos.html" class="nav-link">Projetos</a>
+            <a href="/pages/resume.html" class="nav-link">Resume</a>
+            <a href="/pages/contato.html" class="nav-link">Contatos</a>
+            </nav>
+        </div>
+
+    <div id="overlay"></div>
+
+  <!-- Conteúdo principal -->
+  <div class="py-5 bg-transparent" style="margin-top: 80px;">
+  <div class="container w-100 w-lg-75 p-4 text-bg-secondary rounded bg-transparent">
+    <div class="text-center">
+      <h1 class="fw-bold text-info display-4 mb-4 mt-5 neon-text3">Experiência</h1>
+    </div>
+
+    <div class="row mt-4 g-4 justify-content-center">
+      <!-- Bull Finance -->
+      <div class="col-md-5">
+        <div class="card h-100 bg-dark text-light border border-info shadow-lg card-exp">
+          <div class="card-body">
+            <h5 class="card-title text-info mb-1">Gerente de Projetos – Bull Finance</h5>
+            <div class="exp-date text-info mb-3" style="font-size: 0.9rem;">Set/2023 - Jun/2024</div>
+            <p class="card-text">
+              Atuei como gestor na Liga Acadêmica de Mercado Econômico, organizando cronogramas, avaliando membros por meio de testes e supervisionando projetos de educação financeira e investimentos.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <span class="badge text-bg-info">Gestão de Projetos</span>
+              <span class="badge text-bg-info">Mercado Financeiro</span>
+              <span class="badge text-bg-info">Educação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SQLINK -->
+      <div class="col-md-5">
+        <div class="card h-100 bg-dark text-light border border-info shadow-lg card-exp">
+          <div class="card-body">
+            <h5 class="card-title text-info mb-1">Estagiário – SQLINK</h5>
+            <div class="exp-date text-info mb-3" style="font-size: 0.9rem;">Set/2024 - Out/2024</div>
+            <p class="card-text">
+              Responsável por realizar o recadastramento imobiliário em Guarapari-ES, coletando e atualizando dados nos bairros para o banco de dados da prefeitura.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-3">
+              <span class="badge text-bg-info">Levantamento de Dados</span>
+              <span class="badge text-bg-info">Georreferenciamento</span>
+              <span class="badge text-bg-info">Atendimento em Campo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Footer -->
+    <footer>
+      <div class="py-3 bg-transparent">
+        <div class="container fs-6 mb-3 w-75 w-md-50 w-lg-25 p-3 text-bg-secondary bg-transparent">
+          <footer class="d-flex justify-content-between align-items-center text-info py-4 mt-5">
+            <div>© 2025 Roberto Dias</div>
+            <div class="d-flex gap-3">
+              <a href="https://www.linkedin.com/in/roberto-dias-rdfa23/?locale=pt_BR" target="_blank" class="text-info">
+                <i class="bi bi-linkedin fs-4"></i>
+              </a>
+              <a href="https://github.com/underthedarkxx" target="_blank" class="text-info">
+                <i class="bi bi-github fs-4"></i>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </footer>
+  <!-- Scripts -->
+    <!-- Partículas primeiro -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Bootstrap sem erro de integridade -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- Seu script JavaScript principal -->
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>

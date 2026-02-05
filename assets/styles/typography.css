@@ -1,0 +1,20 @@
+/* Tipografia básica e textos globais */
+
+body, p, ul, li {
+    color: var(--cyan);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--cyan-bright);
+    text-shadow:
+        0 0 10px var(--cyan-bright),
+        0 0 20px var(--cyan-bright);
+    outline: none;
+}

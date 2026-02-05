@@ -1,0 +1,46 @@
+/*baseCss*/
+body {
+    background-image: url('../images/base.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.1s;
+}
+
+
+
+/* Cursor visível em inputs e textarea no mobile */
+@media (max-width: 991.98px) {
+    input,
+    textarea,
+    select,
+    button,
+    a {
+        cursor: auto !important;
+    }
+}
+
+.custom-cursor {
+    left: -100px;
+    top: -100px;
+}
+
+/* cursor invisível para ocultar o cursor padrão */
+.cursor-invisible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  cursor: none !important;
+  z-index: 9999;
+}
+.download-curriculo,
+.download-curriculo * {
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
+

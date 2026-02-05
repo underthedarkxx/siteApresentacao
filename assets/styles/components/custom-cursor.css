@@ -1,0 +1,61 @@
+:root {
+  --cyan-light: #00ffff;
+  --cyan-active: #00e0ff;
+}
+
+@media (min-width: 992px) {
+  body.cursor-ready * {
+    cursor: none !important;
+  }
+
+  body.cursor-ready *:focus,
+  body.cursor-ready *:active {
+    cursor: none !important;
+  }
+}
+
+.mouse-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 202, 240, 0.3) 0%, rgba(0, 0, 0, 0) 90%);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  will-change: opacity, background;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background-color: var(--cyan-light);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1001;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, opacity 0.1s ease, background-color 0.2s ease;
+  opacity: 1;
+  will-change: transform, opacity, background-color;
+}
+
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1.6);
+  background-color: var(--cyan-active);
+}
+
+#particles-js {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}

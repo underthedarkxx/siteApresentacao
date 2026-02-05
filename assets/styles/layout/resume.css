@@ -1,0 +1,38 @@
+/*resumeCss*/
+.resume-container h1,
+.resume-container h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow:
+        0 0 2px var(--cyan),
+        0 0 5px var(--cyan),
+        0 0 100px var(--cyan);
+}
+
+.resume-container a {
+    color: var(--cyan);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.resume-container a:hover,
+.resume-container a:focus {
+    color: var(--cyan-bright);
+    text-shadow:
+        0 0 10px var(--cyan-bright),
+        0 0 20px var(--cyan-bright);
+    outline: none;
+}
+
+.resume-container ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-container ul li {
+    margin-bottom: 0.5rem;
+}
+
+.resume-container p {
+    margin-bottom: 0.8rem;
+}

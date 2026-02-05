@@ -1,0 +1,55 @@
+/* cards.css */
+
+/* --- Títulos em Ciano --- */
+.project-card-main h2,
+.small-card h3,
+.card-title {
+    color: var(--cyan-bright) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* --- Projeto em Destaque --- */
+.project-card-main {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    border: 1px solid var(--cyan-bright) !important;
+    box-shadow: var(--neon-shadow);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+}
+
+.project-card-main:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 0 30px var(--cyan-shadow2);
+}
+
+/* --- Cards Secundários --- */
+.small-card {
+    transition: all 0.3s ease;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(13, 202, 240, 0.2) !important;
+}
+
+.small-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cyan-bright) !important;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+}
+
+/* --- Elementos de Interface (Terminal) --- */
+.terminal-frame {
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.img-destaque-grande {
+    width: 100%;
+    height: 400px;
+    object-fit: contain; /* Garante visibilidade total da sua interface */
+}
+
+@media (max-width: 768px) {
+    .img-destaque-grande { height: 250px; }
+}

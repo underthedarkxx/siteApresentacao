@@ -1,0 +1,32 @@
+/*buttons.css*/
+.btn-hover-ciano {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    will-change: color, background-color, border-color, box-shadow, transform;
+}
+
+.btn-hover-ciano:hover {
+    color: rgb(0, 4, 255);
+    border-color: var(--cyan-bright);
+    background-color: rgba(17, 0, 255, 0.253);
+    box-shadow:
+        0 0 5px var(--cyan-bright),
+        0 0 10px rgb(0, 192, 192),
+        0 0 20px rgb(0, 143, 143),
+        0 0 40px rgb(0, 66, 66);
+    text-shadow:
+        0 0 40px rgb(0, 66, 66),
+        0 0 20px rgb(0, 143, 143),
+        0 0 10px rgb(0, 192, 192),
+        0 0 5px var(--cyan-bright);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    will-change: box-shadow, transform;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 10px var(--cyan-bright), 0 0 20px var(--cyan-bright), 0 0 40px var(--cyan-bright);
+    transform: translateY(-5px);
+}
+

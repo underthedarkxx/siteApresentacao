@@ -1,0 +1,10 @@
+:root {
+    /* Cores Principais */
+    --cyan: #0dcaf0;
+    --cyan-bright: #00ffff;
+    
+    /* Efeitos de Transparência e Brilho */
+    --glass-bg: rgba(17, 17, 17, 0.85);
+    --cyan-shadow2: rgba(0, 255, 255, 0.4);
+    --neon-shadow: 0 0 15px var(--cyan-shadow2);
+}

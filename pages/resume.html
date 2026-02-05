@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roberto Dias</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
+        crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/styles/main.css" />
+
+
+
+</head>
+<body class="bg-transparent">
+  <div id="particles-js"></div>
+  <div class="mouse-light"></div>
+  <div class="custom-cursor"></div>
+
+      <nav class="navbar navbar-expand-lg bg-transparent fixed-top" data-bs-theme="dark">
+        <div class="container-fluid w-100 w-lg-75 p-3 d-flex align-items-center">
+            <a class="navbar-brand brand-animado" href="/index.html">
+            <span class="text-info">R</span class="text-info"><span class="text-info">o</span><span class="text-info">b</span><span class="text-info">e</span><span class="text-info">r</span><span class="text-info">t</span><span class="text-info">o</span>
+            <span class="text-info">&nbsp;|&nbsp;</span>
+            <span class="text-info">D</span class="text-info"><span class="text-info">E</span ><span class="text-info">V</span>
+            </a>
+
+            <!-- Botão hamburguer para abrir sidebar no mobile -->
+            <button id="openSidebarBtn" class="btn btn-outline-info d-lg-none ms-auto" aria-label="Abrir menu">
+            &#9776;
+            </button>
+
+            <!-- Menu original para desktop (escondido no mobile) -->
+            <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto neon-navbar">
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/index.html">Home</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/sobre.html">Sobre</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/experiencia.html">Experiência</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/projetos.html">Projetos</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/resume.html">Resume</a></strong></li>
+                <li class="nav-item"><strong><a class="nav-link text-info" href="/pages/contato.html">Contatos</a></strong></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Sidebar lateral -->
+        <div id="sidebar" class="sidebar">
+            <button id="closeSidebarBtn" aria-label="Fechar menu">&times;</button>
+            <nav>
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/pages/sobre.html" class="nav-link">Sobre</a>
+            <a href="/pages/experiencia.html" class="nav-link">Experiência</a>
+            <a href="/pages/projetos.html" class="nav-link">Projetos</a>
+            <a href="/pages/resume.html" class="nav-link">Resume</a>
+            <a href="/pages/contato.html" class="nav-link">Contatos</a>
+            </nav>
+        </div>
+
+    <div id="overlay"></div>
+
+  <div class="py-5 bg-transparent" style="margin-top: 80px;">
+    <div class="container w-100 w-lg-75">
+      <h2 class="text-info text-center mb-5 display-5 fw-bold neon-text3">Currículo</h2>
+
+      <main class="resume-container" role="main" aria-label="Currículo de Roberto Dias">
+        <h1>Roberto Dias Furtado de Araújo</h1>
+        <p><strong>Data de nascimento:</strong> 20/09/2002, 22 anos</p>
+        <p><strong>Endereço:</strong> Av Praiana, 1673 - Guarapari, Espírito Santo, Brasil</p>
+        <p><strong>Telefone:</strong> (27) 99982-4291</p>
+        <p><strong>Email:</strong> roberto.diasfurtadoaraujo@gmail.com</p>
+
+        <h2>Formação Acadêmica</h2>
+        <ul>
+          <li>Conclusão do Ensino Médio - Escola Estadual EEEFM Angélica Paixão</li>
+          <li>Graduação - UFES - 10/2021-12/2023 (trancado)</li>
+          <li>Graduação - UVV - Desde 07/2024 (em andamento)</li>
+        </ul>
+
+        <h2>Experiência Profissional</h2>
+        <ul>
+          <li>Estágio - SQLink - Cadastrador de campo - Guarapari/ES - 09/2024 a 10/2024</li>
+        </ul>
+
+        <h2>Cursos e Aprimoramentos</h2>
+        <ul>
+          <li>Java Fundamentals – Oracle</li>
+          <li>SQLite Online (básico e avançado)</li>
+          <li>Python: crie a sua primeira aplicação</li>
+          <li>Linux I: terminal e comandos</li>
+          <li>Git e GitHub</li>
+          <li>Lógica de programação (JS e desafios)</li>
+          <li>Database Foundations - Oracle</li>
+        </ul>
+
+        <h2>Projetos</h2>
+        <ul>
+          <li>Gerenciamento de estoque e vendas</li>
+          <li>Sistema de Controle de Estoque</li>
+          <li>Assistente Acadêmico</li>
+          <li>Projeto Engenhatec</li>
+        </ul>
+
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Fácil adaptação</li>
+          <li>Ótimo relacionamento interpessoal</li>
+          <li>Proatividade</li>
+          <li>Boa comunicação</li>
+          <li>Flexibilidade e dinamismo</li>
+          <li>Resolução de problemas</li>
+        </ul>
+
+        <h2>Idiomas</h2>
+        <ul>
+          <li>Português - Nativo</li>
+          <li>Inglês - Intermediário</li>
+        </ul>
+
+        <h2>Redes Sociais</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/roberto-dias-rdfa23" target="_blank">LinkedIn</a></li>
+          <li><a href="https://github.com/underthedarkxx" target="_blank">GitHub</a></li>
+        </ul>
+      </main>
+
+      <section class="download-curriculo text-center my-5">
+      <div class="text-center mt-4">
+        <a href="../assets/curriculo/Roberto Dias Furtado de Araújo.pdf" download
+          class="icon-link icon-link-hover text-info fs-4 p-3 btn-hover-ciano border border-info rounded-pill bg-transparent">
+          <b><i class="bi bi-download me-2"></i> Baixar Currículo</b>
+        </a>
+      </div>
+      <p class="text-info mt-2">Clique no botão para baixar meu currículo completo em PDF.</p>
+    </section>
+
+
+
+    </div>
+  </div>
+
+  <div class="bg-dark py-3 bg-transparent">
+    <div class="container fs-6 mb-3 w-75 w-md-50 w-lg-25 p-3 text-bg-secondary bg-transparent">
+      <footer class="d-flex justify-content-between align-items-center text-info py-4 mt-5">
+        <div>© 2025 Roberto Dias</div>
+        <div class="d-flex gap-3">
+          <a href="https://www.linkedin.com/in/roberto-dias-rdfa23/?locale=pt_BR" target="_blank" class="text-info">
+            <i class="bi bi-linkedin fs-4"></i>
+          </a>
+          <a href="https://github.com/underthedarkxx" target="_blank" class="text-info">
+            <i class="bi bi-github fs-4"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+    <!-- Partículas primeiro -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Bootstrap sem erro de integridade -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- Seu script JavaScript principal -->
+    <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>
