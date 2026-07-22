@@ -1,10 +1,20 @@
 :root {
     /* Cores Principais */
-    --cyan: #0dcaf0;
+    --cyan: #00e5ff;
     --cyan-bright: #00ffff;
-    
+
+    /* Sobrescreve a cor "info" do Bootstrap para casar com o ciano do site —
+       text-info, border-info, badge text-bg-info etc. usam essa variável,
+       não a --cyan acima. */
+    --bs-info: #00e5ff;
+    --bs-info-rgb: 0, 229, 255;
+
     /* Efeitos de Transparência e Brilho */
     --glass-bg: rgba(17, 17, 17, 0.85);
     --cyan-shadow2: rgba(0, 255, 255, 0.4);
     --neon-shadow: 0 0 15px var(--cyan-shadow2);
+
+    /* Tipografia */
+    --font-display: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

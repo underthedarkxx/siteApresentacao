@@ -12,8 +12,14 @@
         crossorigin="anonymous" />
 
     <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
         rel="stylesheet" />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/styles/main.css" />
 
 
@@ -73,11 +79,11 @@
     <div class="py-5 bg-transparent" style="margin-top: 80px;">
         <div class="container w-100 w-lg-75 p-4 text-bg-secondary rounded bg-transparent">
             <div class="d-flex flex-column justify-content-center align-items-start text-start">
-                <p class="text-primary-emphasis fs-4 mb-2"><span class="neon-text neon-outline">Prazer sou o</span></p>
+                <p class="eyebrow mb-2">$ whoami<span class="cursor-blink" aria-hidden="true"></span></p>
                 <h1 class="fw-bold text-info display-4 mb-2">Roberto Dias</h1>
-                <div class="text-primary-emphasis fs-3 mb-2"><span class="neon-text neon-outline ">Desenvolvedor Back-end</span></div>
+                <div class="text-primary-emphasis fs-3 mb-2"><span class="neon-text neon-outline ">Desenvolvedor Back-end | Java & Spring Boot</span></div>
                 <a class="icon-link icon-link-hover text-info fs-4" style="--bs-link-hover-color-rgb: 13, 202, 240;" href="./pages/projetos.html">
-                    Conheça meu portifólio!
+                    Conheça meu portfólio
                     <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
                         <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
@@ -87,15 +93,16 @@
 
         <div class="bg-dark py-3 bg-transparent">
             <div class="container w-100 w-lg-75 p-4 text-bg-secondary bg-transparent">
+                <p class="eyebrow text-center">$ cat sobre.md</p>
                 <h1 class="text-center text-primary-emphasis neon-outline " id="apresentacao ">Apresentação</h1>
                 <p class="text-info fs-3 mb-2 w-100 w-md-75 w-lg-50 p-3">
-                    Sou uma pessoa apaixonado por tecnologia, com forte interesse em programação e análise de dados. Possuo certificações em Java, SQL, Python e JavaScript, além de experiência prática no desenvolvimento de soluções eficientes e escaláveis. Minha base técnica inclui lógica de programação, estruturas de dados e colaboração em projetos de código aberto.
+                    Mantenho em produção um sistema real de gestão de estoque, vendas e produção para uma empresa, construído em Java e Spring Boot com autenticação JWT e migrations versionadas. Tenho certificações em Java, SQL, Python e JavaScript, e já atuei em suporte técnico e banco de dados em ambiente corporativo. Gosto de ir além do código que só funciona: penso em segurança, escalabilidade e manutenção a longo prazo.
                 </p>
                 <a class="icon-link icon-link-hover text-info fs-4 p-3 bg-transparent border border-info border-opacity-50 rounded-pill border-3 btn-hover-ciano" href="./pages/contato.html">
                     <b>Entre em contato</b>
                 </a>
                 <a class="icon-link icon-link-hover text-info fs-4 w-25 p-3" style="--bs-link-hover-color-rgb: 13, 202, 240;" href="./pages/sobre.html">
-                    Saber mais!
+                    Saiba mais
                     <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" aria-hidden="true">
                         <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
                     </svg>
@@ -105,6 +112,7 @@
 
         <div class="bg-dark py-3 bg-transparent">
             <div class="container w-100 w-lg-75 p-4 text-bg-secondary bg-transparent">
+                <p class="eyebrow text-center">$ ls skills/</p>
                 <h1 class="text-center text-primary-emphasis neon-outline " id="habilidades">Habilidades</h1>
                 <div class="row row-cols-2 row-cols-md-1 row-cols-lg-6 g-4 justify-content-center mt-1">
                     <!-- Cartões de habilidade -->
@@ -158,37 +166,20 @@
 
         <div class="bg-dark py-3 bg-transparent">
             <div class="container fs-3 mb-3 w-100 w-md-75 w-lg-50 p-3 text-bg-secondary bg-transparent">
+                <p class="eyebrow text-center">$ git log --oneline</p>
                 <h1 class="text-center text-primary-emphasis neon-outline " id="experiencia">Experiência</h1>
                 <div class="container py-5">
                     <div class="timeline-horizontal d-flex flex-column flex-md-row align-items-center justify-content-between">
                         <!-- Evento 1 -->
                         <div class="timeline-step text-center mb-4 mb-md-0">
                             <div class="circle"></div>
-                            <h6 class="fw-bold mt-2 neon-outline">2025</h6>
-                            <p class="small mb-0">Gerenciamento de estoque e vendas</p>
-                        </div>
-
-                        <div class="line d-none d-md-block"></div>
-
-                        <!-- Evento 1 -->
-                        <div class="timeline-step text-center mb-4 mb-md-0">
-                            <div class="circle"></div>
-                            <h6 class="fw-bold mt-2 neon-outline">2025</h6>
-                            <p class="small mb-0">Controle de Estoque</p>
+                            <h6 class="fw-bold mt-2 neon-outline">2023</h6>
+                            <p class="small mb-0">Bull Finance - Gerência</p>
                         </div>
 
                         <div class="line d-none d-md-block"></div>
 
                         <!-- Evento 2 -->
-                        <div class="timeline-step text-center mb-4 mb-md-0">
-                            <div class="circle"></div>
-                            <h6 class="fw-bold mt-2 neon-outline">2024</h6>
-                            <p class="small mb-0">Qualidade de Software</p>
-                        </div>
-
-                        <div class="line d-none d-md-block"></div>
-
-                        <!-- Evento 3 -->
                         <div class="timeline-step text-center mb-4 mb-md-0">
                             <div class="circle"></div>
                             <h6 class="fw-bold mt-2 neon-outline">2023</h6>
@@ -197,18 +188,47 @@
 
                         <div class="line d-none d-md-block"></div>
 
-                        <!-- Evento 4 -->
+                        <!-- Evento 3 -->
                         <div class="timeline-step text-center mb-4 mb-md-0">
                             <div class="circle"></div>
                             <h6 class="fw-bold mt-2 neon-outline">2024</h6>
                             <p class="small mb-0">Estágio Sqlink</p>
                         </div>
 
+                        <div class="line d-none d-md-block"></div>
+
+                        <!-- Evento 4 -->
+                        <div class="timeline-step text-center mb-4 mb-md-0">
+                            <div class="circle"></div>
+                            <h6 class="fw-bold mt-2 neon-outline">2024</h6>
+                            <p class="small mb-0">Qualidade de Software</p>
+                        </div>
+
+                        <div class="line d-none d-md-block"></div>
+
                         <!-- Evento 5 -->
                         <div class="timeline-step text-center mb-4 mb-md-0">
                             <div class="circle"></div>
-                            <h6 class="fw-bold mt-2 neon-outline">2023</h6>
-                            <p class="small mb-0">Bull Finance - Gerência</p>
+                            <h6 class="fw-bold mt-2 neon-outline">2025</h6>
+                            <p class="small mb-0">Gerenciamento de estoque e vendas</p>
+                        </div>
+
+                        <div class="line d-none d-md-block"></div>
+
+                        <!-- Evento 6 -->
+                        <div class="timeline-step text-center mb-4 mb-md-0">
+                            <div class="circle"></div>
+                            <h6 class="fw-bold mt-2 neon-outline">2025</h6>
+                            <p class="small mb-0">Controle de Estoque</p>
+                        </div>
+
+                        <div class="line d-none d-md-block"></div>
+
+                        <!-- Evento 7 -->
+                        <div class="timeline-step text-center mb-4 mb-md-0">
+                            <div class="circle"></div>
+                            <h6 class="fw-bold mt-2 neon-outline">2026</h6>
+                            <p class="small mb-0">Estágio DA Sistemas</p>
                         </div>
                     </div>
                 </div>
@@ -217,6 +237,7 @@
 
         <div class="bg-dark py-3 bg-transparent">
             <div class="container fs-3 mb-3 w-100 w-md-75 w-lg-50 p-3 text-bg-secondary bg-transparent">
+                <p class="eyebrow text-center">$ ls projetos/</p>
                 <h1 class="text-center text-primary-emphasis neon-outline " id="projetos">Projetos</h1>
                 <section class="py-5 bg-transparent text-light">
                     <div class="row g-4">
@@ -239,8 +260,9 @@
                                         </div>
                                         <h2 class="h1 fw-bold text-cyan-bright mb-3">Gestão de Inventário <br>& Vendas Full-Stack</h2>
                                         <p class="fs-5 text-secondary">
-                                            Solução robusta com <b>Spring Boot</b> e <b>MySQL</b>. Implementação de segurança <b>JWT</b>,
-                                            controle de estoque em tempo real e interface responsiva dinâmica.
+                                            Sistema real em produção para uma empresa de aromatizantes artesanais, com <b>Spring Boot</b>,
+                                            <b>MySQL/TiDB</b> e migrations versionadas via <b>Flyway</b>. Autenticação <b>JWT</b>,
+                                            controle de estoque em tempo real e deploy contínuo em nuvem.
                                         </p>
                                         <div class="d-flex gap-3 mt-4">
                                             <a href="https://www.linkedin.com/feed/update/urn:li:activity:7425315194337259520/?originTrackingId=aGL3bTGjKfGixbpAFnKSLA%3D%3D" class="btn btn-neon-cyan flex-grow-1 text-info" target="_blank">
@@ -255,9 +277,8 @@
                         <div class="col-md-6">
                             <div class="card h-100 bg-dark-glass border-info-soft project-card small-card">
                                 <div class="card-body">
-                                    <div class="d-flex justify-content-between mb-3">
+                                    <div class="mb-3">
                                         <i class="bi bi-folder-fill fs-2 text-info"></i>
-                                        <a href="https://github.com/underthedarkxx/..." target="_blank" class="text-info"><i class="bi bi-github fs-3"></i></a>
                                     </div>
                                     <h3 class="h4 fw-bold">Backend Robusto Java</h3>
                                     <p class="text-secondary small">Arquitetura de camadas focada em escalabilidade e integração SQL.</p>
@@ -287,12 +308,13 @@
                     </div>
                 </section>
                 <div class="text-center mt-4">
-                    <a class="icon-link icon-link-hover text-info fs-4 p-3 btn-hover-ciano border border-info rounded-pill bg-transparent" href="./pages/projetos.html"><b>Ver Todos os projetos</b></a>
+                    <a class="icon-link icon-link-hover text-info fs-4 p-3 btn-hover-ciano border border-info rounded-pill bg-transparent" href="./pages/projetos.html"><b>Ver todos os projetos</b></a>
                 </div>
 
                 <div class="container fs-3 p-3 text-bg-secondary bg-transparent">
+                    <p class="eyebrow text-center">$ mail --to roberto</p>
                     <h1 class="text-center text-primary-emphasis neon-outline  mt-5" id="contato">Área de contato</h1>
-                    <p class="text-info fs-3 mb-2">Caso queira entrar em contato para trocar uma ideia, tirar dúvidas ou propostas para estágio ou empregos estou disponivel.</p>
+                    <p class="text-info fs-3 mb-2">Estou em busca ativa de oportunidades de estágio ou emprego como desenvolvedor back-end. Se o meu perfil fizer sentido para o seu time ou projeto, vamos conversar.</p>
                     <a class="icon-link icon-link-hover text-info fs-4 p-3 btn-hover-ciano border border-info rounded-pill bg-transparent" href="./pages/contato.html"><b>Entre em contato</b></a>
                 </div>
             </div>
@@ -303,7 +325,7 @@
     <div class="bg-dark py-3 bg-transparent">
         <div class="container fs-6 mb-3 w-75 w-md-50 w-lg-25 p-3 text-bg-secondary bg-transparent">
             <footer class="d-flex justify-content-between align-items-center text-info py-4 mt-5">
-                <div>© 2025 Roberto Dias</div>
+                <div>© 2026 Roberto Dias</div>
                 <div class="d-flex gap-3">
                     <a href="https://www.linkedin.com/in/roberto-dias-rdfa23/?locale=pt_BR" target="_blank" class="text-info">
                         <i class="bi bi-linkedin fs-4"></i>

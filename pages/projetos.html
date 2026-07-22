@@ -12,8 +12,14 @@
         crossorigin="anonymous" />
 
     <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
         rel="stylesheet" />
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/styles/main.css" />
 
 
@@ -70,7 +76,8 @@
   <!-- Conteúdo principal -->
   <div class="py-5 bg-transparent" style="margin-top: 80px;">
     <div class="container w-100 w-lg-75">
-      <h1 class="text-info text-center mb-5 display-5 fw-bold neon-text3">Projetos</h1>
+      <h1 class="text-info text-center mb-3 display-5 fw-bold neon-text3">Projetos</h1>
+      <p class="text-info fs-5 text-center mb-5 w-100 w-md-75 w-lg-50 mx-auto">Da gestão de estoque em produção para uma empresa real a experimentos pessoais em Java: projetos que uso para aprender resolvendo problemas de verdade.</p>
       <div class="row g-4">
 
         <!-- Projeto 1 -->
@@ -78,15 +85,16 @@
           <div class="card bg-dark text-light border border-info h-100 shadow-lg">
             <div class="card-body">
               <h5 class="card-title text-info">Sistema de Gestão de Inventário & Vendas Full-Stack</h5>
-              <p class="card-text">Desenvolvi uma API REST robusta utilizando Java e Spring Boot, garantindo a persistência de dados com Spring Data JPA e MySQL.</p>
+              <p class="card-text">Sistema real, em produção, para uma empresa de aromatizantes artesanais: controla matérias-primas, produtos, compras, vendas e produção via ficha técnica, com atualização de estoque em tempo real. Autenticação JWT, migrations versionadas com Flyway e deploy contínuo em nuvem.</p>
               <div class="mb-2">
                 <span class="badge bg-info text-black">Java</span>
                 <span class="badge bg-info text-black">Spring Boot 3</span>
-                <span class="badge bg-info text-black">Spring Security</span>
+                <span class="badge bg-info text-black">Spring Security (JWT)</span>
                 <span class="badge bg-info text-black">Spring Data JPA</span>
+                <span class="badge bg-info text-black">MySQL / TiDB</span>
+                <span class="badge bg-info text-black">Flyway</span>
                 <span class="badge bg-info text-black">APIs RESTful</span>
-                <span class="badge bg-info text-black">MySQL</span>
-                <span class="badge bg-info text-black">Maven</span>
+                <span class="badge bg-info text-black">JUnit / Mockito</span>
               </div>
               <a href="https://www.linkedin.com/feed/update/urn:li:activity:7425315194337259520/?originTrackingId=CjslaqHuOSNcY8zLmiIBZQ%3D%3D" target="_blank" class="btn btn-outline-info btn-sm">
                 <i class="bi bi-linkedin"></i> Ver Projeto no LinkedIn
@@ -101,7 +109,7 @@
           <div class="card bg-dark text-light border border-info h-100 shadow-lg">
             <div class="card-body">
               <h5 class="card-title text-info">Gerenciamento de estoque e vendas.</h5>
-              <p class="card-text">Este projeto é um backend robusto construído com Java e Spring Boot, servindo como o "cérebro" para uma aplicação de gestão de estoque.</p>
+              <p class="card-text">Backend robusto desenvolvido com Java e Spring Boot, responsável pela lógica de negócio de uma aplicação de gestão de estoque.</p>
               <div class="mb-2">
                 <span class="badge bg-info text-black">Java</span>
                 <span class="badge bg-info text-black">POO</span>
@@ -111,6 +119,45 @@
                 <span class="badge bg-info text-black">DTO</span>
               </div>
               <a href="https://github.com/underthedarkxx/Gerenciamento-de-estoque-e-vendas." target="_blank" class="btn btn-outline-info btn-sm">
+                <i class="bi bi-github"></i> Ver Código no GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orquestrador de Arquivos -->
+        <div class="col-md-6">
+          <div class="card bg-dark text-light border border-info h-100 shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title text-info">Orquestrador de Arquivos</h5>
+              <p class="card-text">Programa em Java que organiza arquivos automaticamente com base em regras definidas em YAML: reconhece repositórios Git, protege pastas importantes, evita sobrescrever arquivos e permite desfazer (undo) qualquer movimentação. Roda por padrão em modo seguro (dry-run) e já organizou mais de 200 arquivos em uso real.</p>
+              <div class="mb-2">
+                <span class="badge bg-info text-black">Java 26</span>
+                <span class="badge bg-info text-black">Gradle</span>
+                <span class="badge bg-info text-black">SQLite</span>
+                <span class="badge bg-info text-black">Apache Tika</span>
+                <span class="badge bg-info text-black">Picocli</span>
+                <span class="badge bg-info text-black">SnakeYAML</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E-Ponto -->
+        <div class="col-md-6">
+          <div class="card bg-dark text-light border border-info h-100 shadow-lg">
+            <div class="card-body">
+              <h5 class="card-title text-info">E-Ponto — Sistema de Ponto Eletrônico</h5>
+              <p class="card-text">Projeto em grupo da disciplina de Programação Avançada para Web, que implementei em Flask: autenticação com 2FA, controle de acesso por papéis, geração de relatórios legais (AFD/AEJ, conforme Portaria 671 do MTE) e uma cadeia de hashes SHA-256 que garante a integridade dos registros — qualquer alteração retroativa quebra a cadeia. Coberto por 77 testes automatizados.</p>
+              <div class="mb-2">
+                <span class="badge bg-info text-black">Flask</span>
+                <span class="badge bg-info text-black">SQLAlchemy</span>
+                <span class="badge bg-info text-black">2FA (TOTP)</span>
+                <span class="badge bg-info text-black">SHA-256</span>
+                <span class="badge bg-info text-black">Pandas</span>
+                <span class="badge bg-info text-black">pytest</span>
+              </div>
+              <a href="https://github.com/underthedarkxx/E_Ponto" target="_blank" class="btn btn-outline-info btn-sm">
                 <i class="bi bi-github"></i> Ver Código no GitHub
               </a>
             </div>
@@ -140,7 +187,7 @@
           <div class="card bg-dark text-light border border-info h-100 shadow-lg">
             <div class="card-body">
               <h5 class="card-title text-info">Projeto de Qualidade de Software</h5>
-              <p class="card-text">Foco em documentação e boas práticas de software.</p>
+              <p class="card-text">Projeto acadêmico com foco em documentação técnica e boas práticas de qualidade de software.</p>
               <div class="mb-2"><span class="badge bg-info text-black">Quality System</span></div>
               <a href="https://www.linkedin.com/in/roberto-dias-rdfa23/details/projects/1751499475330/single-media-viewer/" target="_blank" class="btn btn-outline-info btn-sm">
                 <i class="bi bi-linkedin"></i> Ver Projeto no LinkedIn
@@ -154,7 +201,7 @@
           <div class="card bg-dark text-light border border-info h-100 shadow-lg">
             <div class="card-body">
               <h5 class="card-title text-info">Engenhatech</h5>
-              <p class="card-text">Backend Flask com chatbot e SQL para site de engenharia civil.</p>
+              <p class="card-text">Backend Flask com chatbot para site de engenharia civil; camada de dados em SQL com stored procedures, triggers e functions para regras de negócio e integridade (projeto de Banco de Dados II).</p>
               <div class="mb-2">
                 <span class="badge bg-info text-black">Python</span>
                 <span class="badge bg-info text-black">Flask</span>
@@ -213,7 +260,7 @@
   <div class="py-3 bg-transparent">
     <div class="container fs-6 mb-3 w-75 w-md-50 w-lg-25 p-3 text-bg-secondary bg-transparent">
       <footer class="d-flex justify-content-between align-items-center text-info py-4 mt-5">
-        <div>© 2025 Roberto Dias</div>
+        <div>© 2026 Roberto Dias</div>
         <div class="d-flex gap-3">
           <a href="https://www.linkedin.com/in/roberto-dias-rdfa23/" target="_blank" class="text-info">
             <i class="bi bi-linkedin fs-4"></i>

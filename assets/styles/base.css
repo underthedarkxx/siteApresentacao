@@ -19,11 +19,6 @@ body {
     }
 }
 
-.custom-cursor {
-    left: -100px;
-    top: -100px;
-}
-
 /* cursor invisível para ocultar o cursor padrão */
 .cursor-invisible {
   position: fixed;
